@@ -36,10 +36,10 @@ const InputComment = ({
 		if (!id) return;
 		if (editCommentData?.isEditing && comment !== editCommentData.text) {
 			handleUpdateComment(id, { text: comment, isEdited: true });
-			editCommentData?.isEditingToggle();
 		} else {
 			handleAddComment(id, comment);
 		}
+		editCommentData?.isEditingToggle();
 		setComment("");
 		if (toggleInput) toggleInput();
 		if (prevCommentToggle && !editCommentData?.isEditing) prevCommentToggle();
@@ -47,10 +47,10 @@ const InputComment = ({
 
 	return (
 		<Box mb=".8rem">
-			<Group>
-				<Icon icon={<IconUserCircle size="1.8rem" />} />
+			<Group justify="flex-start" align="center" gap="md" w="100%">
+				<Icon icon={<IconUserCircle size="2rem" />} />
 				<Input
-					w="50rem"
+					w="90%"
 					size="md"
 					radius="xl"
 					value={comment}

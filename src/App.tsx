@@ -10,7 +10,7 @@ const App = () => {
 
 	return (
 		<MantineProvider defaultColorScheme="dark">
-			<Container fluid h="100vh" px="8rem">
+			<Container size="xl">
 				<Header />
 				<Comments comments={comments} setComments={setComments} />
 			</Container>

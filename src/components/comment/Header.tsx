@@ -45,7 +45,7 @@ const Header = ({
 			)}
 
 			<Box ml="auto">
-				<Menu position="right" shadow="md" withArrow offset={12}>
+				<Menu position="left" shadow="md" withArrow offset={12}>
 					<Menu.Target>
 						<Icon icon={<IconDots size="1.1rem" />} />
 					</Menu.Target>
@@ -56,9 +56,9 @@ const Header = ({
 							onClick={handleEdit}>
 							Edit
 						</Menu.Item>
-						<Menu.Item leftSection={<IconSearch size="1.1rem" />}>
+						{/* <Menu.Item leftSection={<IconSearch size="1.1rem" />}>
 							Search
-						</Menu.Item>
+						</Menu.Item> */}
 						<Menu.Item
 							leftSection={<IconTrash size="1.1rem" />}
 							onClick={handleDelete}>

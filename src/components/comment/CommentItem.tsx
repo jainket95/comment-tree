@@ -28,7 +28,7 @@ const CommentItem = ({
 	const [isEditing, { toggle: isEditingToggle }] = useDisclosure(false);
 
 	const showPreviousReply = (comment: any) => {
-		return comment.children && comment.children.length > 0;
+		return comment.children && comment.children.length;
 	};
 
 	const handleEditComment = () => {
@@ -46,7 +46,7 @@ const CommentItem = ({
 			my="1rem">
 			<Icon icon={<IconUserCircle size="2rem" />} />
 
-			<Flex direction="column" mt="-.3rem" w="60rem">
+			<Flex direction="column" mt="-.3rem" w="100%">
 				<Header
 					comment={comment}
 					handleEditComment={handleEditComment}
@@ -73,19 +73,19 @@ const CommentItem = ({
 					/>
 				)}
 
-				{showPreviousReply(comment) && (
+				{!!showPreviousReply(comment) && (
 					<Box>
 						<Group justify="flex-start" ml="-.8rem">
 							<Icon
 								left
-								text="Toggle previous reply"
+								text={`Toggle previous reply (${showPreviousReply(comment)})`}
 								onClick={prevCommentToggle}
 								ml=".8rem"
 								icon={<IconMessages size="1.4rem" />}
 							/>
 						</Group>
 
-						<Collapse ml="2rem" in={showPrevComment}>
+						<Collapse ml=".5rem" in={showPrevComment}>
 							{comment.children.map((comment, idx) => {
 								if (Array.isArray(comment) && comment.length) {
 									return (
