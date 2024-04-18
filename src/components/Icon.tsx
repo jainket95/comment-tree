@@ -1,19 +1,29 @@
-import { ActionIcon, Flex, Group, Text } from "@mantine/core";
+import {
+	ActionIcon,
+	Flex,
+	Group,
+	Text,
+	useComputedColorScheme,
+} from "@mantine/core";
 import { cloneElement, forwardRef } from "react";
 
 const Icon = forwardRef((props: any, ref) => {
 	const iconProps = props.icon;
+	const computedColorScheme = useComputedColorScheme("light", {
+		getInitialValueInEffect: true,
+	});
 
 	const iconWithProps = cloneElement(iconProps, {
 		size: iconProps.props.size || "2rem", // Default size if not provided
-		stroke: iconProps.props.stroke || 1.2, // Default stroke if not provided
+		stroke: iconProps.props.stroke || 1.5, // Default stroke if not provided
 	});
 
 	return (
 		<ActionIcon
 			ref={ref}
 			variant="transparent"
-			color="gray"
+			p="md"
+			color={computedColorScheme === "dark" ? "gray" : "black"}
 			radius="xs"
 			w={props.text && "auto"}
 			{...props}>

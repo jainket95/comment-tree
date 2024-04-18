@@ -37,7 +37,7 @@ const Actions = ({ id, like, showInput, handleUpdateComment }: ActionProps) => {
 	};
 
 	return (
-		<Group gap="md" mb=".5rem" ml="-.4rem">
+		<Group gap="md" ml="-.4rem">
 			<Icon
 				onClick={() => onCountUpdate("inc")}
 				icon={<IconArrowBigUp size="1.1rem" />}

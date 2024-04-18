@@ -42,9 +42,9 @@ const CommentItem = ({
 			align="flex-start"
 			direction="row"
 			wrap="nowrap"
-			gap="md"
-			my="1rem">
-			<Icon icon={<IconUserCircle size="2rem" />} />
+			gap="sm"
+			my="1.2rem">
+			<Icon mt="-.27rem" icon={<IconUserCircle size="2rem" stroke={1.2} />} />
 
 			<Flex direction="column" mt="-.3rem" w="100%">
 				<Header
@@ -53,7 +53,7 @@ const CommentItem = ({
 					handleDeleteComment={handleDeleteComment}
 				/>
 
-				<Text size="sm">{comment.text}</Text>
+				<Text size="md">{comment.text}</Text>
 
 				<Actions
 					id={comment.id}

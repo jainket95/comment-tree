@@ -11,8 +11,8 @@ const Header = () => {
 				mt="1rem"
 				mb="0.5rem">
 				<Title size="2.8rem" c="blue">
-					NestedDialogues {"  "}
-					<Text span c="white" fz="1.8rem">
+					NestedDialogues
+					<Text span c="white" fz="1.8rem" ml="1rem">
 						Building a Hierarchical Comment Section
 					</Text>
 				</Title>
@@ -26,7 +26,7 @@ const Header = () => {
 				is essentially a Recursive UI Section that incorporates basic Create,
 				Read, Update, Delete (CRUD) operations.
 				<br /> It employs recursion in both the frontend and backend, utilizing
-				a tree data structure for organization.
+				a tree data structure.
 			</Text>
 		</>
 	);

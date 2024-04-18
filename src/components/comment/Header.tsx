@@ -31,7 +31,7 @@ const Header = ({
 		handleEditComment();
 	};
 	return (
-		<Group gap="xs" mb=".3rem">
+		<Group gap="md" justify="center">
 			<Title mr=".5rem" order={5}>
 				{name}
 			</Title>
